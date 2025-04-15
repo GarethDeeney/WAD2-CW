@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> header}}
+    <link rel="stylesheet" href="../../css/styles.css" />
+  </head>
+  <body class="other-page-image overlay">
+    <div class="main-content">
+      {{> navbar}}
+
+      <div class="course full-width">
+        <div class="card-body">
+          <p>Please enter the username of the user you wish to remove.</p>
+          <form method="POST" action="/users/remove">
+            <div class="remove-form">
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="username"
+              />
+
+              <div class="btn-section">
+                <input
+                  type="submit"
+                  value="Delete"
+                  class="btn login-btn"
+                  name="action"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  {{> footer}}
+</html>

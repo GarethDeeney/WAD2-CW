@@ -1,0 +1,115 @@
+<div class="form-row">
+  <div class="form-group">
+    <label for="location">Location</label>
+
+    <select name="location" id="location" selected="{{location}}">
+      <option value="London">London</option>
+      <option value="Glasgow">Glasgow</option>
+      <option value="Edinburgh">Edinburgh</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="name"> Name </label>
+    <div>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        value="{{name}}"
+        class="form-field"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="price"> Price (£) </label>
+    <div>
+      <input
+        type="text"
+        id="price"
+        name="price"
+        placeholder="Enter your price"
+        value="{{price}}"
+        class="form-field"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="form-group">
+    <label for="start date"> Start Date </label>
+    <div>
+      <input
+        type="date"
+        id="start-date"
+        name="startDate"
+        placeholder="Enter your start date"
+        value="{{startDate}}"
+        class="form-field"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="duration"> Duration </label>
+    <div>
+      <input
+        type="text"
+        id="duration"
+        name="duration"
+        placeholder="Enter your duration"
+        value="{{duration}}"
+        class="form-field"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="form-group">
+    <label for="start date"> Start Time </label>
+    <div>
+      <input
+        type="time"
+        id="start-time"
+        name="startTime"
+        placeholder="Enter your start time"
+        value="{{startTime}}"
+        class="form-field"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="end time"> End Time </label>
+    <div>
+      <input
+        type="time"
+        id="end-time"
+        name="endTime"
+        placeholder="Enter your end time"
+        value="{{endTime}}"
+        class="form-field"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="description"> Description </label>
+  <div>
+    <textarea
+      type="text"
+      id="description"
+      name="description"
+      placeholder="Enter your description"
+      rows="4"
+      cols="50"
+    >{{description}}
+      </textarea
+    >
+  </div>
+</div>

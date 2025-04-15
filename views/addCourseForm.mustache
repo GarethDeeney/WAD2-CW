@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> header}}
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="other-page-image overlay">
+    <div class="main-content">
+      {{> navbar}}
+      <div class="course-info-section">
+        <form method="POST" action="/courses/create" class="form">
+
+          {{> courseInputs}}
+
+          <div class="btn-section">
+            <input
+              type="submit"
+              value="Create"
+              class="btn login-btn"
+              name="action"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  {{> footer}}
+</html>

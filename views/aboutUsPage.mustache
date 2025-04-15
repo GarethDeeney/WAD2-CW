@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> header}}
+  </head>
+  <body class="other-page-image overlay">
+    <div class="main-content">
+      {{> navbar}}
+      <div class="about-container">
+        <div class="about-us-section">
+          <h1 class="about-header">ABOUT US</h1>
+          <p class="about-text">
+            Welcome to the Dance Institute, where passion, creativity, and
+            movement come to life! We are a vibrant community of dancers,
+            educators, and performers dedicated to inspiring individuals of all
+            ages and skill levels. Whether you're looking to dance for fun,
+            improve your technique, or pursue a professional career, we have the
+            classes and expertise to help you achieve your goals.
+          </p>
+        </div>
+        <div class="locations-section">
+          <h2 class="about-header">LOCATIONS</h2>
+
+          <div class="location-list">
+            {{#locations}} {{> locations}} {{/locations}}
+          </div>
+        </div>
+
+        <h2 class="about-header" style="margin:2rem 0;">ENQUIRIES</h2>
+      <form action="/enquiry" method="POST" class="enquiry-form">
+        <div class="form-group">
+          <label for="name"> Name </label>
+          <div>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              class="form-field"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email </label>
+          <div>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              class="form-field"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message"> message </label>
+          <div>
+            <textarea
+              type="text"
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+              rows="2"
+              cols="120"
+              style="max-width:100%;"
+            ></textarea>
+          </div>
+        </div>
+        <input type="submit" value="Send" class="btn login-btn" name="action" />
+
+      </form>
+      </div>
+
+      
+    </div>
+  </body>
+  {{> footer}}
+</html>

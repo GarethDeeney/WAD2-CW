@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> header}}
+  </head>
+  <body class="other-page-image overlay">
+    <div class="main-content">
+      {{> navbar}}
+
+      <div class="course full-width">
+        <div class="card-body">
+          <div class="title-section">
+            <h2 class="course-name">users</h2>
+            <div class="user-actions">
+              <a href="/users/remove" class="login-btn course-btn"
+                >Remove user</a
+              >
+              <a href="/users/create" class="login-btn course-btn"
+                >Add new user</a
+              >
+            </div>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Forename</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#users}}
+              <tr>
+                <td>{{forename}}</td>
+                <td>{{surname}}</td>
+                <td>{{username}}</td>
+                <td>{{email}}</td>
+              </tr>
+              {{/users}}
+            </tbody>
+          </table>
+
+          {{^users}} No users found. {{/users}}
+        </div>
+      </div>
+    </div>
+  </body>
+  {{> footer}}
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> header}}
+    <link rel="stylesheet" href="../../css/styles.css" />
+  </head>
+  <body class="other-page-image overlay">
+    <div class="main-content">
+      {{> navbar}}
+
+      <div class="course-info-section">
+        {{#course}}
+        <div class="course">
+        Successfully enrolled on the {{name}} course.
+
+        Look Forward to seeing you on {{startDate}}
+        </div>
+        
+        {{/course}}
+      </div>
+    </div>
+  </body>
+  {{> footer}}
+</html>

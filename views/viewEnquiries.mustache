@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> header}}
+  </head>
+  <body class="other-page-image overlay">
+    <div class="main-content">
+      {{> navbar}}
+
+      <div class="enquiries-section">
+
+        {{#enquiries}}
+        <div class="card enquiry-card">
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">{{email}}</h6>
+            <h6 class="card-text">{{date}}</h6>
+            <p class="card-text">{{message}}</p>
+          </div>
+        </div>
+        {{/enquiries}}
+
+      </div>
+    </div>
+  </body>
+  {{> footer}}
+</html>

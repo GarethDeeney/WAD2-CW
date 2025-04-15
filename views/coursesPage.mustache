@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> header}}
+  </head>
+  <body class="other-page-image overlay">
+    <div class="main-content">
+      {{> navbar}}
+
+      <div class="locations-page">
+        <div class="location-section">
+          <div class="title-section">
+            <h2 class="course-location">LONDON</h2>
+            {{#user}}
+            <a href="/courses/create" class="login-btn course-btn">Add new Course</a>
+            {{/user}}
+          </div>
+
+          <div class="course-list">
+            {{#londonCourses}} 
+            {{> course}} 
+            {{/londonCourses}}
+            {{^londonCourses}} No courses available in London right now.
+            {{/londonCourses}}
+          </div>
+        </div>
+
+        <div class="location-section">
+          <h2 class="course-location">GLASGOW</h2>
+
+          <div class="course-list">
+            {{#glasgowCourses}} 
+            {{> course}} 
+            {{/glasgowCourses}}
+            {{^glasgowCourses}} No courses available in Glasgow right now.
+            {{/glasgowCourses}}
+          </div>
+        </div>
+
+        <div class="location-section">
+          <h2 class="course-location">EDINBURGH</h2>
+
+          <div class="course-list">
+            {{#edinburghCourses}} 
+            {{> course}} 
+            {{/edinburghCourses}}
+            {{^edinburghCourses}} No courses available in Edinburgh right now.
+            {{/edinburghCourses}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  {{> footer}}
+</html>

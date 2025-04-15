@@ -1,0 +1,31 @@
+<div class="course">
+  <div class="card-body">
+    <form action="">
+    <h2 class="course-name">{{name}}</h2>
+    <div class="course-card">
+      <div class="course-card-section">
+        <p>{{description}}</p>
+        <div class="course-details">
+          <p>Start Date : {{startDate}}</p>
+          <p>Duration : {{duration}}</p>
+          <p>Time : {{startTime}} - {{endTime}}</p>
+          <p>Price : £{{price}}</p>
+        </div>
+      </div>
+      <div class="button-section">
+          {{#user}}
+            <a href="/courses/{{& _id}}/class-list" class="course-button">Generate Class List</a>
+          {{/user}} 
+          
+        <a href="/courses/{{& _id}}" class="course-button">
+          {{#user}}
+            Update
+          {{/user}} 
+          {{^user}}
+            Enroll Now
+          {{/user}}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

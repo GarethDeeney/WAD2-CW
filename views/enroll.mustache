@@ -1,0 +1,36 @@
+<form method="POST" action="/enroll/{{& _id}}">
+  <div class="form-group">
+    <label for="forename"> Forename </label>
+    <div>
+      <input
+        type="text"
+        id="forename"
+        name="forename"
+        placeholder="Enter your forename"
+      />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="surname"> Surname </label>
+    <div>
+      <input
+        type="surname"
+        id="surname"
+        name="surname"
+        placeholder="Enter your surname"
+      />
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="email"> Email </label>
+    <div>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+      />
+    </div>
+  </div>
+  <input type="submit" value="Enrol" class="btn login-btn" />
+</form>

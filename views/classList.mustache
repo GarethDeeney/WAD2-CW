@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> header}}
+    <link rel="stylesheet" href="../../css/styles.css" />
+  </head>
+  <body class="other-page-image overlay">
+    <div class="main-content">
+      {{> navbar}}
+
+      <div class="course full-width">
+        {{#course}}
+        <div class="card-body">
+          <h2 class="course-name">{{name}}</h2>
+          <form method="POST" action="./class-list/remove ">
+            <div class="remove-user-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="remove-email"
+                  name="email"
+                  placeholder="Enter email of user to remove"
+                />
+              </div>
+              <input
+                type="submit"
+                value="Remove"
+                name="action"
+                class="btn login-btn"
+              />
+            </div>
+          </form>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Forename</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#participants}}
+              <tr>
+                <td>{{firstName}}</td>
+                <td>{{lastName}}</td>
+                <td>{{email}}</td>
+              </tr>
+              {{/participants}}
+            </tbody>
+          </table>
+
+          {{^participants}} No Participants enrolled. {{/participants}}
+        </div>
+        {{/course}}
+      </div>
+    </div>
+  </body>
+  {{> footer}}
+</html>

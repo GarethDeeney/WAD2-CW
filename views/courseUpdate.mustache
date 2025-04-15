@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> header}}
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="other-page-image overlay">
+    <div class="main-content">
+      {{> navbar}}
+
+      <div class="course-info-section">
+        {{#course}}
+        <div class="course">
+
+        <h2 class="course-name">{{name}}</h2>
+          <div class="card-body">
+            <div class="course-card">
+              <div class="course-card-section">
+                <div class="course-details">
+                  <p>Start Date : {{startDate}}</p>
+                  <p>Duration : {{duration}}</p>
+                  <p>Time : {{startTime}} - {{endTime}}</p>
+                  <p>Price : £{{price}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{> enroll}}
+
+        </div>
+        {{/course}}
+      </div>
+    </div>
+  </body>
+  {{> footer}}
+</html>
